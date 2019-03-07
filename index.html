@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 1: showing the weather</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <h2>Description</h2>
+    <p>Using the tdd-weather repo as your starter code, create and append DOM elements that show the following information:</p>
+    <ul>
+        <li>city name</li>
+        <li>temperature</li>
+        <li>wind speed</li>
+    </ul>
+    <ul data-description></ul>
+
+    <h2>Bonus #1: Showing an icon</h2>
+    <p>This page tells you how to use the weather.icon value to construct the URL for an image to show: <a href="https://openweathermap.org/weather-conditions">https://openweathermap.org/weather-conditions</a></p>
+    <p>Write a function that accepts the entire weather object, extracts the icon information, and returns the URL for the icon.</p>
+    <p>Then, write a function that accepts a URL, creates DOM elements to show the image, and appends it to the page.</p>
+    <p data-bonus1></p>
+
+    <h2>Bonus #2: Showing a map</h2>
+    <p>Using the latitude and longitude functions and the information from this stack overflow answer, add a map element to the page.</p>
+    <p><a href="https://stackoverflow.com/a/46136238">https://stackoverflow.com/a/46136238</a></p>
+    <p data-bonus2></p>
+
+    <h2>Bonus #3: Converting the sunrise/sunset</h2>
+    <p>The sunrise and sunset information is in an odd format. In order to show it in a human readable format, you'll need to do some detective work.</p>
+    <p>Check out the following the following for information on how to convert it:</p>
+    <ul>
+        <li>Google search</li>
+        <li> <a href="http://momentjs.com">https://momentjs.com/</a></li>
+    </ul>
+    <p data-bonus3></p>
+
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

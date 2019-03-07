@@ -1,3 +1,4 @@
+////////////// DESCRIPTION //////////////
 // Make a div to throw all the answers into
 // // Later, we'll pin this div where we want to answers to go
 const descriptionDiv = document.createElement('div');
@@ -28,3 +29,23 @@ descriptionDiv.append(airTemp);
 descriptionDiv.append(windSpeed);
 
 
+////////////// BONUS ONE //////////////
+// http://openweathermap.org/img/w/10d.png
+
+// Write a function that accepts the weather.js info and extracts the icon info into the URL
+function putsIconInURL(weatherSet){
+    // gets the icon name
+    const icon = weatherSet.weather[0].icon;
+    // puts it in the appropriate URL
+    return `http://openweathermap.org/img/w/${icon}.png`;
+}
+
+// Write a function that takes the URL, creates DOM elements to show the image, and appends it to the page
+function putsURLInImgAndAppends(URL){
+    imgIcon = document.createElement('img');
+    imgIcon.setAttribute('src', URL);
+    const bonus1 = document.querySelector('[data-bonus1]');
+    bonus1.append(imgIcon);
+}
+
+putsURLInImgAndAppends(putsIconInURL(atlWeather));

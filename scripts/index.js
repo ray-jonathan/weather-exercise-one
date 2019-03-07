@@ -43,8 +43,11 @@ function putsIconInURL(weatherSet){
 // Write a function that takes the URL, creates DOM elements to show the image, and appends it to the page
 function putsURLInImgAndAppends(URL){
     imgIcon = document.createElement('img');
+    imgIconTitle = document.createElement('h4');
     imgIcon.setAttribute('src', URL);
+    imgIconTitle.textContent= 'Showing an icon: ';
     const bonus1 = document.querySelector('[data-bonus1]');
+    bonus1.append(imgIconTitle);
     bonus1.append(imgIcon);
 }
 

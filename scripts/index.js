@@ -30,8 +30,6 @@ descriptionDiv.append(windSpeed);
 
 
 ////////////// BONUS ONE //////////////
-// http://openweathermap.org/img/w/10d.png
-
 // Write a function that accepts the weather.js info and extracts the icon info into the URL
 function putsIconInURL(weatherSet){
     // gets the icon name
@@ -51,4 +49,38 @@ function putsURLInImgAndAppends(URL){
     bonus1.append(imgIcon);
 }
 
+// Call the function
 putsURLInImgAndAppends(putsIconInURL(atlWeather));
+
+
+////////////// BONUS TWO //////////////
+// Using the latitude and longitude functions and the information from 
+// this stack overflow answer, add a map element to the page.
+// https://stackoverflow.com/a/46136238
+
+// Find the data tag for the second Bonus exercise
+const bonus2 = document.querySelector('[data-bonus2]');
+
+// Get the lat/long
+const latitude = atlWeather.coord.lat;
+const longitude = atlWeather.coord.lon;
+
+// Make the map
+const iframeMap = document.createElement('iframe');
+iframeMap.setAttribute('width', 360);
+iframeMap.setAttribute('height', 270);
+iframeMap.setAttribute('frameborder', 0);
+iframeMap.setAttribute('style', 'border:0');
+iframeMap.setAttribute('src', `http://maps.google.com/maps?q=${latitude}, ${longitude}&z=15&output=embed`);
+
+// Send the map to the page
+bonus2.append(iframeMap);
+
+
+////////////// BONUS THREE //////////////
+// The sunrise and sunset information is in an odd format. In order to 
+// show it in a human readable format, you'll need to do some detective work.
+// Check out the following the following for information on how to convert it:
+// Google search
+// https://momentjs.com/
+
